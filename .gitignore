@@ -10,3 +10,5 @@ terraform.tfstate*
 
 # Lock de proveedores
 .terraform.lock.hcl
+
+*.tfvars
