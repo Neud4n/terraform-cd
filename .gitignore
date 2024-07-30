@@ -1,0 +1,18 @@
+connection.tf
+
+# Archivos de estado
+terraform.tfstate*
+
+*.tfplan
+
+# Directorio de trabajo de Terraform
+.terraform/
+
+# Archivos de configuración local
+*.tfvars
+
+# Lock de proveedores
+.terraform.lock.hcl
+
+# Excluyo github actions por el momento.
+.github/
