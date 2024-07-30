@@ -1,19 +1,19 @@
-variable "client_id" {
+variable "CLIENT_ID" {
   type = string
   sensitive = true
 }
 
-variable "client_secret" {
+variable "CLIENT_SECRET" {
   type = string
   sensitive = true
 }
 
-variable "tenant_id" {
+variable "TENANT_ID" {
   type = string
   sensitive = true
 }
 
-variable "subscription_id" {
+variable "SUBSCRIPTION_ID" {
   type = string
   sensitive = true
 }
