@@ -10,7 +10,7 @@ terraform {
     resource_group_name  = "seriousbyterraform"             
     storage_account_name = "neudanterraformstates"                                 
     container_name       = "terraform-states"                                  
-    key                  = "prod.terraform.tfstate"
+    key                  = "main.terraform.tfstate"
   }
 }
 
