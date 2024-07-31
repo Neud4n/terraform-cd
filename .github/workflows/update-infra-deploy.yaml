@@ -20,12 +20,16 @@ jobs:
       
       - name: "Terraform init"
         run: terraform init
+        working-directory: ./infra
 
       - name: Terraform validate
         run: terraform validate
+        working-directory: ./infra
 
       - name: Terraform plan
         run: terraform plan
+        working-directory: ./infra
 
       - name: Terraform apply
         run: terraform apply -auto-approve
+        working-directory: ./infra
