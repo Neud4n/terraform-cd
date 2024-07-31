@@ -16,6 +16,7 @@ terraform {
 
 variable "CLIENT_ID" {
   type = string
+  description = "Client ID del usuario terraform"
 }
 
 provider "azurerm" {
