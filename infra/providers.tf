@@ -11,15 +11,15 @@ terraform {
     storage_account_name = "neudanterraformstates"                                 
     container_name       = "terraform-states"                                  
     key                  = "main.terraform.tfstate"
-    sas_token            = var.SAS_TOKEN
   }
 }
 
-variable "SAS_TOKEN" {
+variable "CLIENT_ID" {
   type = string
 }
 
 provider "azurerm" {
+  client_id = var.CLIENT_ID
   skip_provider_registration = true
   features {}
 }
