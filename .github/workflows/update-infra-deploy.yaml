@@ -5,6 +5,7 @@ on:
       - main
     paths:
       - 'infra/**'
+      - '.github/**'
 
 jobs:
   deployInfra:
