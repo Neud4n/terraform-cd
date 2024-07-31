@@ -1,5 +1,10 @@
 name: TerraformDeploy
-on: [push]
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'infra/**'
 
 jobs:
   deployInfra:
@@ -13,17 +18,14 @@ jobs:
       - name: "Preparar código"
         uses: actions/checkout@v4
       
-      - name: "Preparar terraform"
-        uses: hashicorp/setup-terraform@v2
-        with:
-          terraform_version: 1.9.3
-      
       - name: "Terraform init"
         run: terraform init
 
-      - name: "Terraform plan"
-        id: plan
-        run: terraform plan -out plan.tfplan
+      - name: Terraform validate
+        run: terraform validate
 
-      - name: "Terraform apply"
-        run: terraform apply -auto-approve plan.tfplan
+      - name: Terraform plan
+        run: terraform plan
+
+      - name: Terraform apply
+        run: terraform apply -auto-approve
