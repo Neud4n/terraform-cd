@@ -15,7 +15,7 @@ jobs:
       ARM_CLIENT_ID: ${{ secrets.CLIENT_ID }}
       ARM_CLIENT_SECRET: ${{ secrets.CLIENT_SECRET }}
       ARM_SUBSCRIPTION_ID: ${{ secrets.SUBSCRIPTION_ID }}
-      ARM_SAS_TOKEN: ${{ secrets.SAS_TOKEN }}
+      TF_VAR_SAS_TOKEN: ${{ secrets.SAS_TOKEN }}
     steps:
       - name: "Preparar código"
         uses: actions/checkout@v4

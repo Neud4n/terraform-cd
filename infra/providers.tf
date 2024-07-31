@@ -11,7 +11,12 @@ terraform {
     storage_account_name = "neudanterraformstates"                                 
     container_name       = "terraform-states"                                  
     key                  = "main.terraform.tfstate"
+    sas_token            = var.SAS_TOKEN
   }
+}
+
+variable "SAS_TOKEN" {
+  type = string
 }
 
 provider "azurerm" {
