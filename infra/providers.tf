@@ -14,12 +14,7 @@ terraform {
   }
 }
 
-variable "CLIENT_ID" {
-  type = string
-}
-
 provider "azurerm" {
-  client_id = var.CLIENT_ID
   skip_provider_registration = true
   features {}
 }
